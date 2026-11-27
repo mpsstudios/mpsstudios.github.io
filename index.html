@@ -1,22 +1,363 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>M.P.S. Studios</title>
-<style>body{font-family:system-ui,sans-serif;max-width:640px;margin:40px auto;padding:0 20px;color:#222;line-height:1.6}h1{color:#5a3aa8}a{color:#5a3aa8}</style>
-</head><body>
-<h1>M.P.S. Studios</h1>
-<p>We make casual mobile games and apps for Android.</p>
-<h2>Our games and apps</h2>
-<ul>
-<li><a href="https://play.google.com/store/apps/details?id=com.mpsstudios.elixia">Elixia: Potion Sort</a> (<a href="https://mpsstudios.github.io/elixia-privacy.html">privacy policy</a>)</li>
-<li><a href="https://play.google.com/store/apps/details?id=com.mpsstudios.threesecondsbefore">3 Seconds Before: Puzzle</a> (<a href="https://mpsstudios.github.io/3-seconds-before-privacy.html">privacy policy</a>)</li>
-<li><a href="https://play.google.com/store/apps/details?id=com.mpsstudios.daywhirl">Daywhirl: Spin Day &amp; Night</a> (<a href="https://mpsstudios.github.io/daywhirl-privacy.html">privacy policy</a>)</li>
-<li><a href="https://play.google.com/store/apps/details?id=com.mpsstudios.unseal">Unseal: Letters for the Moment</a> (<a href="https://mpsstudios.github.io/unseal-privacy.html">privacy policy</a>)</li>
-<li><a href="https://play.google.com/store/apps/details?id=com.mpsstudios.boltpop">Bolt Pop: Screw Puzzle</a> (<a href="https://mpsstudios.github.io/boltpop-privacy.html">privacy policy</a>)</li>
-<li><a href="https://play.google.com/store/apps/details?id=com.mpsstudios.loopyisles">Loopy Isles</a> (<a href="https://mpsstudios.github.io/loopyisles-privacy.html">privacy policy</a>)</li>
-<li><a href="https://play.google.com/store/apps/details?id=com.MPS_Studios.Juggle_Hustle">Juggle Hustle 3D: Keep It Up</a> (<a href="https://mpsstudios.github.io/jugglehustle-privacy.html">privacy policy</a>)</li>
-<li><a href="https://play.google.com/store/apps/details?id=com.mpsstudios.starwake">Starwake: Idle Island Story</a> (<a href="https://mpsstudios.github.io/starwake-privacy.html">privacy policy</a>)</li>
-</ul>
-<h2>Contact</h2>
-<p><a href="mailto:mps.studios.pc@gmail.com">mps.studios.pc@gmail.com</a></p>
-<p><small>&copy; M.P.S. STUDIOS P.C.</small></p>
-</body></html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>M.P.S. Studios · Colourful mobile games from Athens</title>
+<meta name="description" content="M.P.S. Studios (M.P.S. STUDIOS I.K.E.) is an independent game studio in Athens, Greece, making colourful puzzle and casual games for Android: Elixia, 3 Seconds Before, Bolt Pop, Juggle Hustle 3D, Daywhirl and more.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="M.P.S. Studios · Colourful mobile games from Athens">
+<meta property="og:description" content="Fun puzzle and casual games, free on Google Play.">
+<meta property="og:image" content="https://mpsstudios.github.io/og-image.jpg">
+<meta property="og:url" content="https://mpsstudios.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta name="theme-color" content="#3d86ee">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"M.P.S. Studios","legalName":"M.P.S. STUDIOS I.K.E.","url":"https://mpsstudios.github.io/","logo":"https://mpsstudios.github.io/img-mps-logo.webp","email":"mps.studios.pc@gmail.com","foundingDate":"2020-10-12","address":{"@type":"PostalAddress","streetAddress":"Emmanouil Benaki 25","postalCode":"10678","addressLocality":"Athens","addressCountry":"GR"},"identifier":{"@type":"PropertyValue","propertyID":"G.E.MI.","value":"156636403000"}}</script>
+<style>
+:root{--b1:#3d86ee;--b2:#5aaaf6;--b3:#9eeefc;--y:#fff36b;--ink:#0f1b3d;--ink2:#4a5677;--bg:#f5f8ff;--card:#fff;--line:#e3eaf8;--r:22px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{width:min(1160px,100% - 40px);margin:0 auto}
+/* header */
+header{position:fixed;inset:0 0 auto;z-index:50;transition:background .3s,box-shadow .3s,backdrop-filter .3s}
+header.solid{background:rgba(255,255,255,.86);backdrop-filter:saturate(1.4) blur(14px);box-shadow:0 1px 0 var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;font-weight:800;letter-spacing:.06em;font-size:18px}
+.brand .face{width:38px;height:34px;color:#fff;filter:drop-shadow(0 2px 0 rgba(20,60,140,.35))}
+.brand b{color:var(--y)}
+header.solid .brand{color:var(--ink)} header.solid .brand .face{color:var(--b1);filter:none} header.solid .brand b{color:var(--b1)}
+.links{display:flex;gap:28px;align-items:center}
+.links a{text-decoration:none;color:#fff;font-weight:500;font-size:15px;opacity:.92}
+header.solid .links a{color:var(--ink2)}
+.links a.cta{background:#fff;color:var(--b1);padding:9px 18px;border-radius:999px;font-weight:600;opacity:1}
+header.solid .links a.cta{background:var(--b1);color:#fff}
+/* hero */
+.hero{position:relative;overflow:hidden;color:#fff;padding:150px 0 120px;background:radial-gradient(1200px 600px at 85% 10%,rgba(158,238,252,.9),transparent 60%),linear-gradient(135deg,var(--b1),var(--b2) 55%,var(--b3))}
+.hero:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.28) 1.2px,transparent 1.3px);background-size:26px 26px;mask-image:linear-gradient(180deg,#000,transparent 85%)}
+.hero:after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:90px;background:var(--bg);clip-path:ellipse(75% 100% at 50% 100%)}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);padding:6px 14px;border-radius:999px;font-size:13px;font-weight:600;letter-spacing:.04em}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--y);box-shadow:0 0 0 4px rgba(255,243,107,.25)}
+.hero h1{font-size:clamp(40px,6vw,68px);line-height:1.04;font-weight:800;margin:22px 0 18px;letter-spacing:-.02em;text-shadow:0 3px 0 rgba(20,60,140,.25)}
+.hero h1 span{color:var(--y)}
+.hero p.lead{font-size:clamp(17px,1.6vw,19px);max-width:520px;opacity:.95}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;border-radius:14px;padding:13px 22px;font-size:15px;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.light{background:#fff;color:var(--b1);box-shadow:0 10px 30px rgba(15,40,110,.25)}
+.btn.ghost{color:#fff;border:1.5px solid rgba(255,255,255,.6)}
+.icons-row{display:flex;margin-top:38px}
+.icons-row img{width:52px;height:52px;border-radius:14px;border:3px solid #fff;margin-left:-10px;box-shadow:0 6px 16px rgba(15,40,110,.25)}
+.icons-row img:first-child{margin-left:0}
+.phones{position:relative;height:520px}
+.phone{position:absolute;width:220px;border-radius:30px;padding:8px;background:#0f1b3d;box-shadow:0 30px 60px rgba(10,30,90,.35),inset 0 0 0 2px rgba(255,255,255,.08)}
+.phone img{border-radius:23px;aspect-ratio:9/16;object-fit:cover;width:100%}
+.phone.p1{left:4%;top:60px;transform:rotate(-9deg);animation:float 7s ease-in-out infinite}
+.phone.p2{left:33%;top:0;z-index:2;width:240px;animation:float 6s ease-in-out -2s infinite}
+.phone.p3{right:0;top:80px;transform:rotate(8deg);animation:float 8s ease-in-out -4s infinite}
+@keyframes float{50%{translate:0 -12px}}
+/* sections */
+section{padding:90px 0}
+.sec-head{text-align:center;max-width:640px;margin:0 auto 52px}
+.kicker{color:var(--b1);font-weight:700;letter-spacing:.14em;font-size:13px;text-transform:uppercase}
+.sec-head h2{font-size:clamp(30px,4vw,44px);line-height:1.15;margin:10px 0 12px;letter-spacing:-.01em}
+.sec-head p{color:var(--ink2)}
+/* game cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:28px}
+.card{background:var(--card);border-radius:var(--r);overflow:hidden;box-shadow:0 1px 0 var(--line),0 18px 40px -22px rgba(30,70,160,.35);display:flex;flex-direction:column;transition:transform .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 1px 0 var(--line),0 28px 50px -20px rgba(30,70,160,.45)}
+.card-art{position:relative;aspect-ratio:1024/500;overflow:hidden}
+.card-art img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .card-art img{transform:scale(1.05)}
+.badge{position:absolute;top:14px;right:14px;background:var(--y);color:var(--ink);font-weight:700;font-size:12px;padding:5px 12px;border-radius:999px;box-shadow:0 4px 12px rgba(0,0,0,.15)}
+.card-body{position:relative;padding:50px 26px 26px;flex:1;display:flex;flex-direction:column}
+.card-icon{position:absolute;top:-40px;left:24px;width:80px;height:80px;border-radius:20px;border:4px solid #fff;box-shadow:0 10px 24px rgba(20,50,130,.25)}
+.tag{position:absolute;top:16px;right:24px;font-size:12px;font-weight:600;color:var(--b1);background:#eaf2ff;padding:4px 12px;border-radius:999px}
+.card h3{font-size:20px;line-height:1.3;margin-bottom:8px}
+.card p{color:var(--ink2);font-size:15px;flex:1}
+.card-actions{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:22px}
+.btn.play{background:#0f1b3d;color:#fff;padding:9px 16px;border-radius:12px}
+.btn.play svg{width:22px;height:22px}
+.btn.play span{display:flex;flex-direction:column;line-height:1.1;font-size:16px}
+.btn.play small{font-size:9px;letter-spacing:.08em;opacity:.8;font-weight:500}
+.btn.soon{background:#eef2fa;color:var(--ink2);cursor:default}
+.btn.soon:hover{transform:none}
+.priv{font-size:13px;color:var(--ink2);text-decoration:none;border-bottom:1px dashed #b7c3dd}
+.priv:hover{color:var(--b1)}
+/* values */
+.values{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.vgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.v{padding:28px;border-radius:var(--r);background:var(--bg)}
+.v .ic{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;font-size:24px;background:linear-gradient(135deg,var(--b1),var(--b3));margin-bottom:16px;box-shadow:0 8px 18px -6px rgba(61,134,238,.6)}
+.v h3{font-size:17px;margin-bottom:6px}
+.v p{color:var(--ink2);font-size:14.5px}
+/* about */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.about-art{position:relative;border-radius:28px;overflow:hidden;aspect-ratio:1;background:linear-gradient(135deg,var(--b1),var(--b2) 55%,var(--b3));display:grid;place-items:center;box-shadow:0 30px 60px -30px rgba(30,70,160,.6)}
+.about-art:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.3) 1.2px,transparent 1.3px);background-size:24px 24px}
+.about-art .face{position:relative;width:55%;color:#fff;filter:drop-shadow(0 8px 0 rgba(20,60,140,.3))}
+.about-art .wm{position:absolute;bottom:9%;left:0;right:0;text-align:center;color:#fff;font-weight:800;font-size:clamp(26px,3.4vw,40px);letter-spacing:.08em;text-shadow:0 3px 0 rgba(20,60,140,.3)}
+.about-art .wm b{color:var(--y)}
+.about h2{font-size:clamp(30px,4vw,42px);line-height:1.15;margin:10px 0 18px}
+.about p{color:var(--ink2);margin-bottom:14px}
+.facts{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:26px}
+.fact{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 18px}
+.fact small{display:block;color:var(--ink2);font-size:12px;letter-spacing:.06em;text-transform:uppercase}
+.fact strong{font-size:15px}
+/* contact */
+.contact{position:relative;overflow:hidden;color:#fff;border-radius:32px;padding:64px 48px;text-align:center;background:radial-gradient(800px 400px at 90% 0,rgba(158,238,252,.8),transparent 60%),linear-gradient(135deg,var(--b1),var(--b2))}
+.contact:before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.25) 1.2px,transparent 1.3px);background-size:24px 24px}
+.contact>*{position:relative}
+.contact h2{font-size:clamp(28px,4vw,40px);margin-bottom:10px}
+.contact p{opacity:.95;max-width:560px;margin:0 auto 26px}
+/* footer */
+footer{padding:56px 0 40px;color:var(--ink2);font-size:14px}
+.fgrid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:40px;padding-bottom:32px;border-bottom:1px solid var(--line)}
+footer .brand{color:var(--ink);margin-bottom:14px} footer .brand .face{color:var(--b1);filter:none} footer .brand b{color:var(--b1)}
+footer h4{color:var(--ink);font-size:14px;margin-bottom:12px;letter-spacing:.04em}
+footer a{text-decoration:none} footer a:hover{color:var(--b1)}
+footer ul{list-style:none;display:grid;gap:6px}
+.legal{padding-top:22px;font-size:13px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none}.phone{animation:none!important}}
+@media (max-width:960px){.hero-grid,.about{grid-template-columns:1fr}.phones{height:440px;max-width:520px;margin:0 auto;width:100%}.phone{width:180px}.phone.p2{width:200px}.vgrid{grid-template-columns:1fr 1fr}.fgrid{grid-template-columns:1fr}}
+@media (max-width:640px){.links a:not(.cta){display:none}.hero{padding:120px 0 100px}.phones{height:360px}.phone{width:140px;border-radius:24px;padding:6px}.phone img{border-radius:19px}.phone.p2{width:160px}.vgrid{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.contact{padding:48px 24px}.facts{grid-template-columns:1fr}section{padding:70px 0}}
+</style>
+</head>
+<body>
+<header id="top">
+  <div class="wrap nav">
+    <a class="brand" href="#top"><svg class="face" viewBox="100 130 500 440" aria-hidden="true">
+
+<g fill="currentColor">
+<path d="M193 160 Q193 140 213 140 L487 140 Q507 140 507 160 L507 315 L572 315 Q592 315 592 335 L592 430 Q592 500 522 500 L475 500 L475 220 Q475 168 423 168 L277 168 Q225 168 225 220 L225 500 L178 500 Q107 500 107 430 L107 335 Q107 315 127 315 L193 315 Z"/>
+<path d="M255 320 L333 320 L333 397 Q333 432 298 432 L265 432 Q255 432 255 422 Z"/>
+<path d="M365 320 L445 320 L445 422 Q445 432 435 432 L402 432 Q365 432 365 397 Z"/>
+<rect x="328" y="447" width="44" height="27"/>
+<path d="M305 494 L358 494 L358 528 Q358 558 331 558 Q305 558 305 528 Z" transform="rotate(-8 331 525)"/>
+</g>
+<path d="M266 485 Q276 497 300 495 L402 495 Q426 497 435 485" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+
+</svg><span>M.P.S. <b>STUDIOS</b></span></a>
+    <nav class="links"><a href="#games">Games</a><a href="#about">About</a><a href="#contact">Contact</a><a class="cta" href="#games">Play free</a></nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow"><i></i>Independent game studio · Athens, Greece</span>
+      <h1>Small games.<br><span>Big smiles.</span></h1>
+      <p class="lead">We make colourful puzzle and casual games for Android: quick to pick up, satisfying to master, and free to download on Google Play.</p>
+      <div class="hero-actions">
+        <a class="btn light" href="#games">Explore our games →</a>
+        <a class="btn ghost" href="#about">About the studio</a>
+      </div>
+      <div class="icons-row"><img src="img-elixia-icon.webp" alt="" width="64" height="64"><img src="img-3sb-icon.webp" alt="" width="64" height="64"><img src="img-boltpop-icon.webp" alt="" width="64" height="64"><img src="img-jugglehustle-icon.webp" alt="" width="64" height="64"><img src="img-daywhirl-icon.webp" alt="" width="64" height="64"><img src="img-unseal-icon.webp" alt="" width="64" height="64"><img src="img-starwake-icon.webp" alt="" width="64" height="64"><img src="img-loopyisles-icon.webp" alt="" width="64" height="64"></div>
+    </div>
+    <div class="phones" aria-hidden="true">
+      <div class="phone p1"><img src="img-3sb-shot.webp" alt=""></div>
+      <div class="phone p2"><img src="img-elixia-shot.webp" alt=""></div>
+      <div class="phone p3"><img src="img-boltpop-shot.webp" alt=""></div>
+    </div>
+  </div>
+</section>
+
+<section id="games">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">Our games</span>
+      <h2>Made to make your day a little brighter</h2>
+      <p>Every game is free to download on Google Play and keeps getting new levels, features and updates.</p>
+    </div>
+    <div class="grid">
+      <article class="card reveal">
+        <div class="card-art"><img src="img-elixia-feature.webp" alt="Elixia: Potion Sort artwork" loading="lazy" width="1024" height="500"></div>
+        <div class="card-body">
+          <img class="card-icon" src="img-elixia-icon.webp" alt="Elixia: Potion Sort icon" loading="lazy" width="96" height="96">
+          <span class="tag">Puzzle</span>
+          <h3>Elixia: Potion Sort</h3>
+          <p>Pour, sort and match glowing potions across hundreds of magical levels. Calm, colourful and very satisfying.</p>
+          <div class="card-actions"><a class="btn play" href="https://play.google.com/store/apps/details?id=com.mpsstudios.elixia" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FBBC04" d="m17.2 8.6-3.4 3.4 3.4 3.4 3.8-2.2c.9-.5.9-1.9 0-2.4z"/><path fill="#4285F4" d="M3.6 1.8c.3-.2.8-.2 1.2 0l12.4 6.8-3.4 3.4z"/><path fill="#EA4335" d="m13.8 12 3.4 3.4L4.8 22.2c-.4.2-.9.2-1.2 0z"/></svg><span><small>GET IT ON</small>Google Play</span></a><a class="priv" href="elixia-privacy.html">Privacy policy</a></div>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-art"><img src="img-3sb-feature.webp" alt="3 Seconds Before: Puzzle artwork" loading="lazy" width="1024" height="500"></div>
+        <div class="card-body">
+          <img class="card-icon" src="img-3sb-icon.webp" alt="3 Seconds Before: Puzzle icon" loading="lazy" width="96" height="96">
+          <span class="tag">Puzzle</span>
+          <h3>3 Seconds Before: Puzzle</h3>
+          <p>Watch the accident, rewind three seconds, move just one object and save everyone. A quick, clever brain-teaser.</p>
+          <div class="card-actions"><a class="btn play" href="https://play.google.com/store/apps/details?id=com.mpsstudios.threesecondsbefore" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FBBC04" d="m17.2 8.6-3.4 3.4 3.4 3.4 3.8-2.2c.9-.5.9-1.9 0-2.4z"/><path fill="#4285F4" d="M3.6 1.8c.3-.2.8-.2 1.2 0l12.4 6.8-3.4 3.4z"/><path fill="#EA4335" d="m13.8 12 3.4 3.4L4.8 22.2c-.4.2-.9.2-1.2 0z"/></svg><span><small>GET IT ON</small>Google Play</span></a><a class="priv" href="3-seconds-before-privacy.html">Privacy policy</a></div>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-art"><img src="img-boltpop-feature.webp" alt="Bolt Pop: Screw Puzzle artwork" loading="lazy" width="1024" height="500"></div>
+        <div class="card-body">
+          <img class="card-icon" src="img-boltpop-icon.webp" alt="Bolt Pop: Screw Puzzle icon" loading="lazy" width="96" height="96">
+          <span class="tag">Puzzle</span>
+          <h3>Bolt Pop: Screw Puzzle</h3>
+          <p>Unscrew the bolts in the right order, match the colours and clear the board. Relaxing to start, tricky to master.</p>
+          <div class="card-actions"><a class="btn play" href="https://play.google.com/store/apps/details?id=com.mpsstudios.boltpop" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FBBC04" d="m17.2 8.6-3.4 3.4 3.4 3.4 3.8-2.2c.9-.5.9-1.9 0-2.4z"/><path fill="#4285F4" d="M3.6 1.8c.3-.2.8-.2 1.2 0l12.4 6.8-3.4 3.4z"/><path fill="#EA4335" d="m13.8 12 3.4 3.4L4.8 22.2c-.4.2-.9.2-1.2 0z"/></svg><span><small>GET IT ON</small>Google Play</span></a><a class="priv" href="boltpop-privacy.html">Privacy policy</a></div>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-art"><img src="img-jugglehustle-feature.webp" alt="Juggle Hustle 3D: Keep It Up artwork" loading="lazy" width="1024" height="500"></div>
+        <div class="card-body">
+          <img class="card-icon" src="img-jugglehustle-icon.webp" alt="Juggle Hustle 3D: Keep It Up icon" loading="lazy" width="96" height="96">
+          <span class="tag">Arcade</span>
+          <h3>Juggle Hustle 3D: Keep It Up</h3>
+          <p>Tap to keep the ball in the air. One more try, one more kick. How many can you do?</p>
+          <div class="card-actions"><a class="btn play" href="https://play.google.com/store/apps/details?id=com.MPS_Studios.Juggle_Hustle" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FBBC04" d="m17.2 8.6-3.4 3.4 3.4 3.4 3.8-2.2c.9-.5.9-1.9 0-2.4z"/><path fill="#4285F4" d="M3.6 1.8c.3-.2.8-.2 1.2 0l12.4 6.8-3.4 3.4z"/><path fill="#EA4335" d="m13.8 12 3.4 3.4L4.8 22.2c-.4.2-.9.2-1.2 0z"/></svg><span><small>GET IT ON</small>Google Play</span></a><a class="priv" href="jugglehustle-privacy.html">Privacy policy</a></div>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-art"><img src="img-daywhirl-feature.webp" alt="Daywhirl: Spin Day &amp; Night artwork" loading="lazy" width="1024" height="500"></div>
+        <div class="card-body">
+          <img class="card-icon" src="img-daywhirl-icon.webp" alt="Daywhirl: Spin Day &amp; Night icon" loading="lazy" width="96" height="96">
+          <span class="tag">Casual</span>
+          <h3>Daywhirl: Spin Day &amp; Night</h3>
+          <p>Spin the little world and deal out day and night so every corner of the planet stays happy.</p>
+          <div class="card-actions"><a class="btn play" href="https://play.google.com/store/apps/details?id=com.mpsstudios.daywhirl" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FBBC04" d="m17.2 8.6-3.4 3.4 3.4 3.4 3.8-2.2c.9-.5.9-1.9 0-2.4z"/><path fill="#4285F4" d="M3.6 1.8c.3-.2.8-.2 1.2 0l12.4 6.8-3.4 3.4z"/><path fill="#EA4335" d="m13.8 12 3.4 3.4L4.8 22.2c-.4.2-.9.2-1.2 0z"/></svg><span><small>GET IT ON</small>Google Play</span></a><a class="priv" href="daywhirl-privacy.html">Privacy policy</a></div>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-art"><img src="img-unseal-feature.webp" alt="Unseal: Letters for the Moment artwork" loading="lazy" width="1024" height="500"></div>
+        <div class="card-body">
+          <img class="card-icon" src="img-unseal-icon.webp" alt="Unseal: Letters for the Moment icon" loading="lazy" width="96" height="96">
+          <span class="tag">Lifestyle</span>
+          <h3>Unseal: Letters for the Moment</h3>
+          <p>Write letters that stay sealed until the right moment: a birthday, a hard day, or years from now.</p>
+          <div class="card-actions"><a class="btn play" href="https://play.google.com/store/apps/details?id=com.mpsstudios.unseal" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#34A853" d="M3.6 1.8 13.8 12 3.6 22.2c-.4-.2-.6-.7-.6-1.2V3c0-.5.2-1 .6-1.2z"/><path fill="#FBBC04" d="m17.2 8.6-3.4 3.4 3.4 3.4 3.8-2.2c.9-.5.9-1.9 0-2.4z"/><path fill="#4285F4" d="M3.6 1.8c.3-.2.8-.2 1.2 0l12.4 6.8-3.4 3.4z"/><path fill="#EA4335" d="m13.8 12 3.4 3.4L4.8 22.2c-.4.2-.9.2-1.2 0z"/></svg><span><small>GET IT ON</small>Google Play</span></a><a class="priv" href="unseal-privacy.html">Privacy policy</a></div>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-art"><img src="img-starwake-feature.webp" alt="Starwake: Idle Island Story artwork" loading="lazy" width="1024" height="500"><span class="badge">Coming soon</span></div>
+        <div class="card-body">
+          <img class="card-icon" src="img-starwake-icon.webp" alt="Starwake: Idle Island Story icon" loading="lazy" width="96" height="96">
+          <span class="tag">Idle</span>
+          <h3>Starwake: Idle Island Story</h3>
+          <p>Help Stella the little star wake a chain of sleeping sky islands in a cozy idle story.</p>
+          <div class="card-actions"><span class="btn soon">Coming soon</span><a class="priv" href="starwake-privacy.html">Privacy policy</a></div>
+        </div>
+      </article>
+      <article class="card reveal">
+        <div class="card-art"><img src="img-loopyisles-feature.webp" alt="Loopy Isles artwork" loading="lazy" width="1024" height="500"><span class="badge">Coming soon</span></div>
+        <div class="card-body">
+          <img class="card-icon" src="img-loopyisles-icon.webp" alt="Loopy Isles icon" loading="lazy" width="96" height="96">
+          <span class="tag">Casual</span>
+          <h3>Loopy Isles</h3>
+          <p>Spin, build, bonk! Grow your own island village and visit your neighbours.</p>
+          <div class="card-actions"><span class="btn soon">Coming soon</span><a class="priv" href="loopyisles-privacy.html">Privacy policy</a></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="values">
+  <div class="wrap vgrid">
+    <div class="v reveal"><div class="ic">🎮</div><h3>Free to play</h3><p>Download and play for free. Optional extras are always clearly priced.</p></div>
+    <div class="v reveal"><div class="ic">🌍</div><h3>Made for everyone</h3><p>Our games speak many languages and follow holidays around the world.</p></div>
+    <div class="v reveal"><div class="ic">✨</div><h3>Polished &amp; fair</h3><p>Hand-tuned levels, original music and art, and no fake timers or tricks.</p></div>
+    <div class="v reveal"><div class="ic">🔒</div><h3>Privacy first</h3><p>Clear privacy policies for every game and easy data deletion requests.</p></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="about-art reveal"><svg class="face" viewBox="100 130 500 440" aria-hidden="true">
+
+<g fill="currentColor">
+<path d="M193 160 Q193 140 213 140 L487 140 Q507 140 507 160 L507 315 L572 315 Q592 315 592 335 L592 430 Q592 500 522 500 L475 500 L475 220 Q475 168 423 168 L277 168 Q225 168 225 220 L225 500 L178 500 Q107 500 107 430 L107 335 Q107 315 127 315 L193 315 Z"/>
+<path d="M255 320 L333 320 L333 397 Q333 432 298 432 L265 432 Q255 432 255 422 Z"/>
+<path d="M365 320 L445 320 L445 422 Q445 432 435 432 L402 432 Q365 432 365 397 Z"/>
+<rect x="328" y="447" width="44" height="27"/>
+<path d="M305 494 L358 494 L358 528 Q358 558 331 558 Q305 558 305 528 Z" transform="rotate(-8 331 525)"/>
+</g>
+<path d="M266 485 Q276 497 300 495 L402 495 Q426 497 435 485" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+
+</svg><div class="wm">M.P.S. <b>STUDIOS</b></div></div>
+    <div class="reveal">
+      <span class="kicker">About us</span>
+      <h2>A small studio with a big love for play</h2>
+      <p>M.P.S. Studios is an independent mobile game studio based in Athens, Greece. We design, build and publish our own games: bright puzzle and casual experiences that fit into a coffee break and keep you smiling long after.</p>
+      <p>We care about the details: smooth controls, fair difficulty, cheerful art and music, and a community we listen to.</p>
+      <div class="facts">
+        <div class="fact"><small>Company</small><strong>M.P.S. STUDIOS I.K.E.</strong></div>
+        <div class="fact"><small>Based in</small><strong>Athens, Greece</strong></div>
+        <div class="fact"><small>Founded</small><strong>2020</strong></div>
+        <div class="fact"><small>Platform</small><strong>Android · Google Play</strong></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" style="padding-top:0">
+  <div class="wrap">
+    <div class="contact reveal">
+      <h2>Say hello 👋</h2>
+      <p>Questions, feedback, bug reports or partnership ideas? We read every message.</p>
+      <a class="btn light" href="mailto:mps.studios.pc@gmail.com">mps.studios.pc@gmail.com</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <a class="brand" href="#top"><svg class="face" viewBox="100 130 500 440" aria-hidden="true">
+
+<g fill="currentColor">
+<path d="M193 160 Q193 140 213 140 L487 140 Q507 140 507 160 L507 315 L572 315 Q592 315 592 335 L592 430 Q592 500 522 500 L475 500 L475 220 Q475 168 423 168 L277 168 Q225 168 225 220 L225 500 L178 500 Q107 500 107 430 L107 335 Q107 315 127 315 L193 315 Z"/>
+<path d="M255 320 L333 320 L333 397 Q333 432 298 432 L265 432 Q255 432 255 422 Z"/>
+<path d="M365 320 L445 320 L445 422 Q445 432 435 432 L402 432 Q365 432 365 397 Z"/>
+<rect x="328" y="447" width="44" height="27"/>
+<path d="M305 494 L358 494 L358 528 Q358 558 331 558 Q305 558 305 528 Z" transform="rotate(-8 331 525)"/>
+</g>
+<path d="M266 485 Q276 497 300 495 L402 495 Q426 497 435 485" fill="none" stroke="currentColor" stroke-width="10" stroke-linecap="round"/>
+
+</svg><span>M.P.S. <b>STUDIOS</b></span></a>
+        <p>Colourful mobile games, made in Athens.</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <ul>
+          <li>M.P.S. STUDIOS I.K.E. (Private Company)</li>
+          <li>G.E.MI. No. 156636403000</li>
+          <li>Emmanouil Benaki 25, 10678 Athens, Greece</li>
+          <li><a href="mailto:mps.studios.pc@gmail.com">mps.studios.pc@gmail.com</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Privacy policies</h4>
+        <p><a href="elixia-privacy.html">Elixia</a> · <a href="3-seconds-before-privacy.html">3 Seconds Before</a> · <a href="boltpop-privacy.html">Bolt Pop</a> · <a href="jugglehustle-privacy.html">Juggle Hustle 3D</a> · <a href="daywhirl-privacy.html">Daywhirl</a> · <a href="unseal-privacy.html">Unseal</a> · <a href="starwake-privacy.html">Starwake</a> · <a href="loopyisles-privacy.html">Loopy Isles</a></p>
+      </div>
+    </div>
+    <div class="legal"><span>© <span id="yr">2026</span> M.P.S. STUDIOS I.K.E. All rights reserved.</span><span>Google Play and the Google Play logo are trademarks of Google LLC.</span></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var h=document.getElementById('top');
+  function s(){h.classList.toggle('solid',window.scrollY>40)} s(); addEventListener('scroll',s,{passive:true});
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var els=document.querySelectorAll('.reveal');
+  if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return;}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});
+  els.forEach(function(e){io.observe(e)});
+})();
+</script>
+</body>
+</html>
